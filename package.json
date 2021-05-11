@@ -1,0 +1,19 @@
+{
+  "name": "oc-project3-ohmyfood",
+  "version": "1.0.0",
+  "description": "project 3 - Ohmyfood!",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./public/sass/style.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthoBastianaggi/AnthonyBastianaggi_3_07052021.git"
+  },
+  "author": "Anthony Bastianaggi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthoBastianaggi/AnthonyBastianaggi_3_07052021/issues"
+  },
+  "homepage": "https://github.com/anthoBastianaggi/AnthonyBastianaggi_3_07052021#readme"
+}
