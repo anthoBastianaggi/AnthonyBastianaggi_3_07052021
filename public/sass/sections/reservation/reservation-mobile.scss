@@ -1,0 +1,57 @@
+@include breakpoint(mobile) {
+    #reservation {
+        .reservation-local {
+            display: block;
+            background-color: #EAEAEA;
+            .container {
+                padding: 1.25rem;
+                max-width: 1080px;
+                margin: 0 auto;
+                color: black;
+                font-size: 1.5rem;
+                width: 250px;
+                .icon-map {
+                    font-size: 25px;
+                }
+
+                .address {
+                    margin-left: 22px;
+                }
+            }     
+        }
+
+        .reservation-search {
+            .reservation-header {            
+                .title {
+                    font-size: 2.3rem;
+                    max-width: 414px;
+                }
+        
+                .subtitle {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 413px) {
+    #reservation {
+        .reservation-search {
+            .reservation-header {
+                padding: 0 1rem;
+                
+                .title {
+                    padding: 3rem 0 0 0;
+                }
+            }
+    
+            .reservation-content {
+                padding: 3rem 1rem 5.2rem 1rem;
+                .btn {
+                    padding: 1.5rem 1.4rem;
+                }
+            }
+        }
+    }
+}

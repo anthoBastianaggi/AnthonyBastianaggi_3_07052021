@@ -1,10 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Shrikhand');
 @import './utils/variables.scss';
 @import './modules/mixins.scss';
 @import './components/header/header.scss';
+@import './components/header/header-mobile.scss';
+@import './sections/reservation/reservation.scss';
+@import './sections/reservation/reservation-mobile.scss';
 
 body {
-    background-color: #f5f5f5;
+    background-color: white;
     color: #4e4e4e;
     margin: 0;
     @include font(1rem, 1.5, 400);
+}
+
+.main {
+    position: relative;
+    top: 120px;
+    min-height: 100vh;
+    @include breakpoint(mobile) {
+        top: 95px;
+    }
+}
+
+.section {
+    width: 100%;
+    margin: 0 auto;
 }

@@ -1,0 +1,61 @@
+@import '../../modules/mixins.scss';
+
+#reservation {
+    background-color: #f6f6f6;
+    .reservation-local {
+       display: none;    
+    }
+
+    .reservation-search {
+        max-width: 1080px;
+        margin: 0 auto;
+        text-align: center;
+        color: black;
+
+        .reservation-header {
+            padding: 0 2rem;
+            
+            .title {
+                font-size: 3rem;
+                padding: 3rem 1.5rem 0 1.5rem;
+                letter-spacing: -0.5px;
+                margin: 0 auto;
+                line-height: 1.2;
+                display: block;
+                margin-bottom: 1rem;
+            }
+    
+            .subtitle {
+                font-size: 1.7rem;
+                letter-spacing: -0.5px;
+                line-height: 1.1;
+                display: block;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        .reservation-content {
+            padding: 3rem 2rem 5.2rem 2rem;
+            .btn {
+                border: 0;
+                padding: 1.5rem 2.4rem;
+                font-weight: 500;
+                font-size: 1.4rem;
+                border-radius: 100px;
+                color: #fff;
+                background-color: #686868;
+                background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+                cursor: pointer;
+                transition-duration: .25s;
+                box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
+
+                &:hover {
+                    background-color: #fff;
+                    box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+                }
+            }
+        }
+    }
+}
+

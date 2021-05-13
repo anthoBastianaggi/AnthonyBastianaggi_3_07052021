@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Shrikhand");
 :root {
   --transparent: transparent;
   --blue: #007bff;
@@ -24,7 +25,7 @@
 }
 
 .header {
-  height: 80px;
+  height: 122px;
   width: 100%;
   position: fixed;
   top: 0px;
@@ -33,23 +34,35 @@
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
 }
 .header .header-container {
-  height: 48px;
+  height: 90px;
   max-width: 845px;
   margin: 0px auto;
-  display: flex;
   padding: 1rem;
 }
-.header .header-container .header-previous {
+.header .header-container .header-column.center {
+  align-items: center;
+}
+.header .header-container .header-column {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: black;
+}
+.header .header-container .header-column:last-child {
+  margin-bottom: 0;
+}
+.header .header-container .header-column .header-previous {
   display: flex;
   align-items: center;
   font-size: 30px;
   color: black;
   text-decoration: none;
 }
-.header .header-container .header-previous.disabled {
+.header .header-container .header-column .header-previous.disabled {
   display: none;
 }
-.header .header-container .header-title {
+.header .header-container .header-column .header-title {
   height: 100%;
   width: 100%;
   display: flex;
@@ -59,12 +72,134 @@
   position: relative;
   margin: 0;
 }
-.header .header-container .header-title .header-link {
+.header .header-container .header-column .header-title .header-link {
   display: flex;
 }
+.header .header-container .header-column .header-title .header-link .logo-ohmyfood {
+  width: 270px;
+}
+.header .header-container .header-column .icon-map {
+  font-size: 23px;
+}
+.header .header-container .header-column .address {
+  margin-left: 22px;
+  font-size: 1.4rem;
+}
 
+@media (max-width: 640px) {
+  .header {
+    height: 95px;
+  }
+  .header .header-container {
+    height: 63px;
+  }
+  .header .header-container .header-column {
+    margin-bottom: 0;
+    height: 100%;
+  }
+  .header .header-container .header-column .header-title .header-link .logo-ohmyfood {
+    width: 250px;
+  }
+  .header .header-container .header-column .icon-map, .header .header-container .header-column .address {
+    display: none;
+  }
+}
+#reservation {
+  background-color: #f6f6f6;
+}
+#reservation .reservation-local {
+  display: none;
+}
+#reservation .reservation-search {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+}
+#reservation .reservation-search .reservation-header {
+  padding: 0 2rem;
+}
+#reservation .reservation-search .reservation-header .title {
+  font-size: 3rem;
+  padding: 3rem 1.5rem 0 1.5rem;
+  letter-spacing: -0.5px;
+  margin: 0 auto;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 1rem;
+}
+#reservation .reservation-search .reservation-header .subtitle {
+  font-size: 1.7rem;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#reservation .reservation-search .reservation-content {
+  padding: 3rem 2rem 5.2rem 2rem;
+}
+#reservation .reservation-search .reservation-content .btn {
+  border: 0;
+  padding: 1.5rem 2.4rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+#reservation .reservation-search .reservation-content .btn:hover {
+  background-color: #fff;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 640px) {
+  #reservation .reservation-local {
+    display: block;
+    background-color: #EAEAEA;
+  }
+  #reservation .reservation-local .container {
+    padding: 1.25rem;
+    max-width: 1080px;
+    margin: 0 auto;
+    color: black;
+    font-size: 1.5rem;
+    width: 250px;
+  }
+  #reservation .reservation-local .container .icon-map {
+    font-size: 25px;
+  }
+  #reservation .reservation-local .container .address {
+    margin-left: 22px;
+  }
+  #reservation .reservation-search .reservation-header .title {
+    font-size: 2.3rem;
+    max-width: 414px;
+  }
+  #reservation .reservation-search .reservation-header .subtitle {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 413px) {
+  #reservation .reservation-search .reservation-header {
+    padding: 0 1rem;
+  }
+  #reservation .reservation-search .reservation-header .title {
+    padding: 3rem 0 0 0;
+  }
+  #reservation .reservation-search .reservation-content {
+    padding: 3rem 1rem 5.2rem 1rem;
+  }
+  #reservation .reservation-search .reservation-content .btn {
+    padding: 1.5rem 1.4rem;
+  }
+}
 body {
-  background-color: #f5f5f5;
+  background-color: white;
   color: #4e4e4e;
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -72,6 +207,22 @@ body {
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5;
+}
+
+.main {
+  position: relative;
+  top: 120px;
+  min-height: 100vh;
+}
+@media (max-width: 640px) {
+  .main {
+    top: 95px;
+  }
+}
+
+.section {
+  width: 100%;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
