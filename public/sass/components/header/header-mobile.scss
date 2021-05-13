@@ -1,0 +1,28 @@
+@import '../../modules/mixins.scss';
+
+@include breakpoint(mobile) {
+    .header {
+        height: 95px;
+    
+        .header-container {
+            height: 63px;
+    
+            .header-column {
+                margin-bottom: 0;
+                height: 100%;
+    
+                .header-title {
+                    .header-link {
+                        .logo-ohmyfood {
+                            width: 250px;
+                        }
+                    }
+                }
+    
+                .icon-map, .address {
+                    display: none;
+                }
+            }     
+        } 
+    }
+}

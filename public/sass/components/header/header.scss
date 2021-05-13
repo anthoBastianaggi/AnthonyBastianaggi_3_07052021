@@ -1,5 +1,5 @@
 .header {
-    height: 80px;
+    height: 122px;
     width: 100%;
     position: fixed;
     top: 0px;
@@ -8,37 +8,64 @@
     box-shadow: 0px 0px 12px 0px rgba(0,0,0,.5);
 
     .header-container {
-        height: 48px;
+        height: 90px;
         max-width: 845px;
         margin: 0px auto;
-        display: flex;
         padding: 1rem;
 
-        .header-previous {
-            display: flex;
+        .header-column.center {
             align-items: center;
-            font-size: 30px;
-            color: black;
-            text-decoration: none;
-        }
-        
-        .header-previous.disabled {
-            display: none;
         }
 
-        .header-title {
-            height: 100%;
-            width: 100%;
+        .header-column {
             display: flex;
-            flex-direction: row;
-            align-items: center;
+            align-items: baseline;
             justify-content: center;
-            position: relative;
-            margin: 0;
-    
-            .header-link {
-                display: flex;
+            margin-bottom: 1rem;
+            color: black;
+            &:last-child {
+                margin-bottom: 0;
             }
-        }
+
+            .header-previous {
+                display: flex;
+                align-items: center;
+                font-size: 30px;
+                color: black;
+                text-decoration: none;
+            }
+            
+            .header-previous.disabled {
+                display: none;
+            }
+    
+            .header-title {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                margin: 0;
+        
+                .header-link {
+                    display: flex;
+
+                    .logo-ohmyfood {
+                        width: 270px;
+                    }
+                }
+            }
+
+            .icon-map {
+                font-size: 23px;
+            }
+
+            .address {
+                margin-left: 22px;
+                font-size: 1.4rem;
+            }
+        }     
     } 
 }
