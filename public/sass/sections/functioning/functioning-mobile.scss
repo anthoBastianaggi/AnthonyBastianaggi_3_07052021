@@ -1,0 +1,43 @@
+@include breakpoint(mobile) {
+    #functioning {
+        .functioning-header {
+            text-align: left;
+            @media screen and (max-width: 413px) {
+                padding: 4rem 1rem 0 1rem;
+            }
+            
+            .title {
+                font-size: 2.3rem;
+            }
+        }
+    
+        .functioning-content {
+            @media screen and (max-width: 413px) {
+                padding: 0 1rem 5.2rem 1rem;
+            }
+
+            .functioning-list {
+                .functioning-item {
+                    margin-left: 15px;
+                    @media screen and (max-width: 470px) {
+                        padding: 2.25rem 0.5rem;
+    
+                        &:before {
+                            left: -1.4rem;
+                        }
+                    }    
+                    
+                    .functioning-label {
+                        @media screen and (max-width: 470px) {
+                            margin-left: 20px;
+                        }
+
+                        @media screen and (max-width: 413px) {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
