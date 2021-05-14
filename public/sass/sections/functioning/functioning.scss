@@ -1,0 +1,75 @@
+#functioning {
+    .functioning-header {
+        max-width: 1080px;
+        margin: 0 auto;
+        color: black;
+        text-align: center;
+        padding: 4rem 2rem 0 2rem;
+
+        .title {
+            font-size: 3rem;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-top: 0;
+        }
+    }
+
+    .functioning-content {
+        max-width: 1080px;
+        margin: 0 auto;
+        color: black;
+        padding: 0 2rem 5.2rem 2rem;
+
+        .functioning-list {
+            list-style: none;
+            counter-reset: compteListe;
+            padding: 0;
+
+            .functioning-item {
+                margin: 2.5rem 0 0 0;
+                align-items: center;
+                border-radius: 1.75rem;
+                padding: 2.25rem 1.5rem;
+                box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
+                background-color: #f6f6f6;
+                display: flex;
+
+                &:before {
+                    counter-increment: compteListe 1;
+                    content: counter(compteListe) " ";
+                    height: 2rem;
+                    width: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    background-color: #9356dc;
+                    border: 1px solid #9356dc;
+                    border-radius: 100%;
+                    position: relative;
+                    left: -2.25rem;
+                }
+
+                &:hover {
+                    background-color: #e4d5f6;
+                    -webkit-box-shadow: 3px 3px 20px #c6bfbf;
+                    box-shadow: 3px 3px 20px #c6bfbf;
+
+                    .icon-mobile, .icon-list-ul, .icon-store {
+                        color: #9356dc;
+                    }
+                }
+
+                .icon-mobile, .icon-list-ul, .icon-store {
+                    font-size: 27px;
+                    color: #7e7e7e;
+                }
+
+                .functioning-label {
+                    font-size: 1.4rem;
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}
