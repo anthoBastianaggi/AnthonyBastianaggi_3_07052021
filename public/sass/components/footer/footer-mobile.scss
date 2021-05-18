@@ -1,0 +1,22 @@
+@include breakpoint(mobile) {
+    .footer {
+        text-align: left;
+        top: 5.8rem;
+        @media screen and (max-width: 413px) {
+            padding: 0.8rem 1rem 1.5rem 1rem;
+        }
+
+    
+        .footer-navigation {
+            display: block;
+            line-height: 1.2;
+            .footer-column {
+                width: 100%;
+                &:last-child {
+                    margin-top: -8px;
+                    line-height: 1.1;
+                }
+            }
+        }  
+    }
+}
