@@ -82,6 +82,29 @@
     animation-fill-mode: $fill;
 }
 
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animation-mixin($name, $from, $to) {
+    @keyframes #{$name} {
+      0% {transform: translate3d($from, 0, 0); opacity: 0;}
+      100% {transform: translate3d($to, 0, 0); opacity: 1;}
+    }
+  }
+  
+
 @mixin breakpoint($point) { 
     @if $point == mobile { 
         @media (max-width: 640px) { 

@@ -3,6 +3,7 @@
         .reservation-local {
             display: block;
             background-color: #EAEAEA;
+            height: 74px;
             .container {
                 padding: 1.25rem;
                 max-width: 1080px;
@@ -10,6 +11,7 @@
                 color: black;
                 font-size: 1.5rem;
                 width: 250px;
+                height: 33px;
                 .icon-map {
                     font-size: 25px;
                 }
@@ -42,13 +44,19 @@
                 padding: 0 1rem;
                 
                 .title {
+                    font-size: 1.9rem;
                     padding: 3rem 0 0 0;
+                }
+
+                .subtitle {
+                    font-size: 1.3rem;
                 }
             }
     
             .reservation-content {
-                padding: 3rem 1rem 5.2rem 1rem;
+                padding: 3rem 1rem 5.5rem 1rem;
                 .btn {
+                    font-size: 1rem;
                     padding: 1.5rem 1.4rem;
                 }
             }

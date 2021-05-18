@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Shrikhand');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100|Shrikhand');
 @import './utils/variables.scss';
 @import './modules/mixins.scss';
 @import './components/header/header.scss';
@@ -7,6 +7,9 @@
 @import './sections/reservation/reservation-mobile.scss';
 @import './sections/functioning/functioning.scss';
 @import './sections/functioning/functioning-mobile.scss';
+@import './sections/restaurants/restaurants.scss';
+@import './sections/restaurants/restaurants-tablet.scss';
+@import './sections/restaurants/restaurants-mobile.scss';
 
 body {
     background-color: white;
@@ -20,7 +23,7 @@ body {
     top: 120px;
     min-height: 100vh;
     @include breakpoint(mobile) {
-        top: 95px;
+        top: 93px;
     }
 }
 
