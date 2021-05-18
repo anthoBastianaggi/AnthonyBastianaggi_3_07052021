@@ -1,0 +1,146 @@
+#restaurants {
+    background-color: #f6f6f6;
+    .restaurants-header {
+        max-width: 1080px;
+        margin: 0 auto;
+        color: black;
+        text-align: center;
+        padding: 5rem 2rem 0 2rem;
+
+        .title {
+            font-size: 3rem;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-top: 0;
+        }
+    }
+
+    .restaurants-content {
+        max-width: 1080px;
+        margin: 0 auto;
+        color: black;
+        padding: 0 2rem 5.2rem 2rem;
+
+        .restaurants-column {
+            width: 100%;
+            column-gap: 2.5rem;
+            display: flex;
+            padding-bottom: 2.5rem;
+
+            .card {
+                background-color: white;
+                border-radius: 1.25rem;
+                box-shadow: 0 0 16px #0000002e;
+                transition-duration: 0.1s;
+                cursor: pointer;
+                box-sizing: border-box;
+                height: 100%;
+                position: relative;
+                width: 100%;
+                flex: 1;
+                min-width: 240px;
+
+                .card-link {
+                    color: inherit;
+                    text-decoration: none;
+
+                    .card-figure {
+                        height: 100%;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+
+                        .card-picture {
+                            height: 255px;
+
+                            .card-image {
+                                height: 100%;
+                                object-fit: cover;
+                                max-width: 100%;
+                                width: 100%;
+                                border-radius: 1rem 1rem 0 0;
+                            }
+                        }
+
+                        .card-badge {
+                            border-radius: 3px;
+                            background-color: #99e2d0;
+                            color: #217460;
+                            padding: 8px 20px;
+                            position: absolute;
+                            top: 18px;
+                            right: 15px;
+                            font-size: 1.2rem;
+                            animation: bagde-opacity 280ms 0ms linear alternate infinite both;
+                        }
+
+                        .card-figcaption {
+                            height: 78px;
+                            padding: 1rem;
+                            display: flex;
+                            align-items: center;
+                            .card-figcaption-content-title {
+                                flex: 1;
+                                .card-title {
+                                    margin: 0;
+                                    font-weight: bold;
+                                    font-size: 1.6rem;
+                                }
+
+                                .card-subtitle {
+                                    font-size: 1.5rem;
+                                    font-weight: lighter;
+                                }
+                            }
+
+                            .card-figcaption-btn-menu {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;      
+
+                                //.icon-menu {
+                                //    &::before {
+                                //        background-image: linear-gradient(0deg,#9356dc,#ff79da);
+                                //        z-index: 1;
+                                //        opacity: 0;
+                                //        transition: opacity 0.4s linear;
+                                //        -webkit-background-clip: text;
+                                //        font-weight: 900;
+                                //        -webkit-text-fill-color: transparent;
+                                //    }
+                                //
+                                //    &:hover {
+                                //        &::before {
+                                //            opacity: 1;
+                                //        }
+                                //    }
+                                //}
+                                
+                                .icon-menu {
+                                    &:hover {
+                                        &::before {
+                                            transition: all .8s ease-in-out;
+                                            -webkit-background-clip: text;
+                                            background-image: linear-gradient(0deg,#9356dc,#ff79da);
+                                            font-weight: 900;                                    
+                                            -webkit-text-fill-color: transparent;
+                                        }     
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include keyframes(bagde-opacity) {
+    0% { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

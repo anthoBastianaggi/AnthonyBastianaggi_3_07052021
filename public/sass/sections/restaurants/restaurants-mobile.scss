@@ -1,0 +1,54 @@
+@include breakpoint(mobile) {
+    #restaurants {
+        .restaurants-header {
+            .title {
+                text-align: left;
+                font-size: 2.3rem;
+            }
+        }
+    
+        .restaurants-content {
+            .restaurants-column {
+                row-gap: 2rem;
+                flex-direction: column;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 413px) {
+    #restaurants {
+        .restaurants-header {
+            padding: 4rem 1rem 0 1rem;
+    
+            .title {
+                font-size: 1.9rem;
+            }
+        }
+    
+        .restaurants-content {
+            padding: 0 1rem 5.2rem 1rem;
+    
+            .restaurants-column {
+                .card { 
+                    .card-link {
+                        .card-figure {
+                            .card-figcaption {
+                                .card-figcaption-content-title {
+                                    .card-title {
+                                        font-size: 1.2rem;
+                                    }
+    
+                                    .card-subtitle {
+                                        font-size: 1.1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

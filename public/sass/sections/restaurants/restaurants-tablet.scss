@@ -1,0 +1,13 @@
+@include breakpoint(tablet) {
+    #restaurants {
+        .restaurants-content {
+            .restaurants-column {
+                @media (min-width: 641px) and (max-width: 800px) {
+                    row-gap: 2rem;
+                    flex-direction: column;
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
