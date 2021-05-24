@@ -1,0 +1,9 @@
+@include breakpoint(tactil) {
+    #section-menu-la-palette-du-gout, #section-menu-la-note-enchantee, #section-menu-a-la-francaise, #section-menu-le-delice-des-sens {
+        padding-bottom: 0;
+       
+        .section-menu-content {
+            border-radius: 2rem 2rem 0 0;
+        }
+    }
+}

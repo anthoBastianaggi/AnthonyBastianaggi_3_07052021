@@ -1,5 +1,3 @@
-@import '../../modules/mixins.scss';
-
 @include breakpoint(mobile) {
     .header {
         height: 93px;
@@ -10,11 +8,20 @@
             .header-column {
                 margin-bottom: 0;
                 height: 100%;
+                align-items: baseline !important;
+
+                .header-previous {
+                    position: relative;
+                    bottom: 12px;
+                }
     
                 .header-title {
                     .header-link {
                         .logo-ohmyfood {
                             width: 250px;
+                            @media screen and (max-width: 413px) {
+                                width: 230px;
+                            }
                         }
                     }
                 }
