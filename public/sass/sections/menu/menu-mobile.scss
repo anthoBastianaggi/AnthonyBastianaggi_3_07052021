@@ -1,0 +1,61 @@
+@include breakpoint(mobile) {
+    #section-menu-la-palette-du-gout, #section-menu-la-note-enchantee, #section-menu-a-la-francaise, #section-menu-le-delice-des-sens {
+        .section-menu-content {
+            margin-top: -2.5rem;
+
+            .section-menu-header {
+                padding: 3.3rem 1.5rem 3rem 1.5rem;
+
+                .title {
+                    padding-right: 15px;
+                    @media screen and (max-width: 413px) {
+                        font-size: 1.9rem;
+                    }
+                }
+            }
+    
+            .menu-content {
+                .menu-starter, .menu-course, .menu-dessert {
+                    padding: 0 1rem;
+                    .menu-starter-header, .menu-course-header, .menu-dessert-header {                   
+                        .menu-starter-title, .menu-course-title, .menu-dessert-title {
+                            @media screen and (max-width: 413px) {
+                                font-size: 1.1rem;
+                            }   
+                        } 
+                    }
+
+                    .article-menu-starter, .article-menu-course, .article-menu-dessert {
+                        .article-menu-starter-header, .article-menu-course-header, .article-menu-dessert-header {
+                            .article-menu-starter-title, .article-menu-course-title, .article-menu-dessert-title {
+                                @media screen and (max-width: 413px) {
+                                    font-size: 1.2rem;
+                                }
+                            }
+    
+                            .article-menu-starter-subtitle, .article-menu-course-subtitle, .article-menu-dessert-subtitle {
+                                @media screen and (max-width: 413px) {
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+    
+                        .article-menu-starter-price, .article-menu-course-price, .article-menu-dessert-price {
+                            @media screen and (max-width: 413px) {
+                                font-size: 1rem;
+                            } 
+                        }      
+                    }
+                }
+            }
+
+            .section-menu-footer {
+                .button-command {
+                    @media screen and (max-width: 413px) {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+}

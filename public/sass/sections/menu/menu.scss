@@ -1,0 +1,213 @@
+#section-menu-la-palette-du-gout, #section-menu-la-note-enchantee, #section-menu-a-la-francaise, #section-menu-le-delice-des-sens {
+    padding-bottom: 4rem;
+    .menu-picture {
+        .menu-image {
+            max-width: 100%;
+            max-height: 32rem;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .section-menu-content {
+        max-width: 1080px;
+        margin: 0 auto;
+        text-align: left;
+        color: black;
+        margin-top: -6.5rem;
+        border-radius: 2rem;
+        background-color: #f6f6f6;
+        z-index: 1;
+        position: relative;
+        .section-menu-header {
+            padding: 3.3rem 4rem 3rem 4rem;
+            display: flex;
+            align-items: center;
+            .title {
+                font-size: 2.3rem;
+                letter-spacing: -0.5px;
+                margin: 0;
+                line-height: 1.2;
+                display: block;
+                width: 100%;
+                font-family: Shrikhand, "cursive";
+            }
+
+            .btn-menu-content {
+                display: flex;
+                .icon-menu {
+                    cursor: pointer;
+                    &:hover {
+                        &::before {
+                            transition: all .8s ease-in-out;
+                            -webkit-background-clip: text;
+                            background-image: linear-gradient(0deg,#9356dc,#ff79da);
+                            font-weight: 900;                                    
+                            -webkit-text-fill-color: transparent;
+                        }     
+                    }
+                }
+            }
+        }
+
+        .menu-content {
+            .menu-starter, .menu-course, .menu-dessert {
+                padding: 0 4rem;
+                animation: menu-scale 800ms 3500ms linear both;
+                transform-origin: top;
+
+                .menu-starter-header, .menu-course-header, .menu-dessert-header {
+                    text-transform: uppercase;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        width: 3rem;
+                        height: .25rem;
+                        background-color: #99e2d0;
+                        position: absolute;
+                        left: 10px;
+                        bottom: 0;
+                    }
+
+                    .menu-starter-title, .menu-course-title, .menu-dessert-title {
+                        padding-bottom: .5rem;
+                        font-weight: lighter;
+                        font-size: 1.5rem;
+                        margin: 0;
+                        margin-bottom: 1.5rem;
+                        padding-left: 10px;
+                    } 
+                }
+
+                .article-menu-starter, .article-menu-course, .article-menu-dessert {
+                    background-color: #fff;
+                    padding: 1rem;
+                    display: flex;
+                    border-radius: .75rem;
+                    margin: 1.2rem 0;
+                    box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
+                    overflow: hidden;
+                    cursor: pointer;
+                    max-width: 100%;
+                    animation: article-menu-opacity 200ms 3500ms linear both;
+
+                    &:hover {
+                        .article-menu-starter-confirmation, .article-menu-course-confirmation, .article-menu-dessert-confirmation {
+                            margin-right: -1rem;
+                            .article-menu-starter-confirmation-icon, .article-menu-course-confirmation-icon, .article-menu-dessert-confirmation-icon {
+                                transform: rotate(0);
+                            }
+                        }
+                    }
+
+                    .article-menu-starter-header, .article-menu-course-header, .article-menu-dessert-header {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        .article-menu-starter-title, .article-menu-course-title, .article-menu-dessert-title {
+                            margin: 0;
+                            font-size: 1.6rem;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+
+                        .article-menu-starter-subtitle, .article-menu-course-subtitle, .article-menu-dessert-subtitle {
+                            font-size: 1.4rem;
+                            font-weight: lighter;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                    }
+
+                    .article-menu-starter-price, .article-menu-course-price, .article-menu-dessert-price {
+                        font-weight: 700;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        padding: 0 1rem;
+                        font-size: 1.4rem;
+                    }      
+                    
+                    .article-menu-starter-confirmation, .article-menu-course-confirmation, .article-menu-dessert-confirmation {
+                        background-color: #99e2d0;
+                        margin: -1rem -6.5rem -1rem 1rem;
+                        width: 5.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition-duration: .5s;
+                        color: #99e2d0;
+                        .article-menu-starter-confirmation-icon, .article-menu-course-confirmation-icon, .article-menu-dessert-confirmation-icon {
+                            height: 1.6rem;
+                            width: 1.6rem;
+                            background-color: #fff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 100px;
+                            transform: rotate(180deg);
+                            transition-duration: .5s;
+                        }
+                    }
+                }
+            }
+
+            .menu-course {
+                padding-top: 1.7rem !important;
+            }
+
+            .menu-dessert {
+                padding-top: 2.9rem !important;
+            }
+        }
+
+        .section-menu-footer {
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            padding: 3rem 0 5.3rem 0;
+
+            .button-command {
+                border: 0;
+                padding: 1.5rem 4.5rem;
+                font-weight: 500;
+                font-size: 1.5rem;
+                border-radius: 100px;
+                color: #fff;
+                background-color: #686868;
+                background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+                transition-duration: 0.25s;
+                box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #fff;
+                    box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+                }
+            }
+        }
+    }
+}
+
+@include keyframes(article-menu-opacity) {
+    0% { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include keyframes(menu-scale) {
+    0% { 
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}

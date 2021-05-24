@@ -1,3 +1,5 @@
+@import './header-mobile.scss';
+
 .header {
     height: 122px;
     width: 100%;
@@ -12,10 +14,6 @@
         max-width: 845px;
         margin: 0px auto;
         padding: 1rem;
-
-        .header-column.center {
-            align-items: center;
-        }
 
         .header-column {
             display: flex;
@@ -68,4 +66,19 @@
             }
         }     
     } 
+}
+
+.menu-header {
+    height: 93px;
+    .menu-header-container {
+        height: 61px;
+        .header-column {
+            height: 100%;
+
+            .header-previous {
+                position: relative;
+                bottom: 12px;
+            }
+        }
+    }
 }
