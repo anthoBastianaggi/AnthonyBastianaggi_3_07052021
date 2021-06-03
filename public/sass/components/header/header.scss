@@ -1,35 +1,31 @@
-@import './header-mobile.scss';
-
 .header {
-    height: 122px;
-    width: 100%;
+    @include size(100%, 122px);
     position: fixed;
     top: 0px;
-    background-color: #fff;
+    background-color: var(--white);
     z-index: 3;
     box-shadow: 0px 0px 12px 0px rgba(0,0,0,.5);
 
     .header-container {
-        height: 90px;
-        max-width: 845px;
+        @include size(auto, 90px);
+        @include maxsize(845px);
         margin: 0px auto;
         padding: 1rem;
 
         .header-column {
-            display: flex;
-            align-items: baseline;
-            justify-content: center;
+            @include flex();
+            @include align(center, baseline);
             margin-bottom: 1rem;
-            color: black;
+            color: var(--black);
             &:last-child {
                 margin-bottom: 0;
             }
 
             .header-previous {
-                display: flex;
-                align-items: center;
-                font-size: 30px;
-                color: black;
+                @include flex();
+                @include align(inherit, center);
+                @include font(30px);
+                color: var(--black);
                 text-decoration: none;
             }
             
@@ -38,20 +34,17 @@
             }
     
             .header-title {
-                height: 100%;
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: end;
-                justify-content: center;
-                position: relative;
+                @include size();
+                @include flex();
+                @include align(center, flex-end);
+                @include relative-position();
                 margin: 0;
         
                 .header-link {
-                    display: flex;
+                    @include flex();
 
                     .logo-ohmyfood {
-                        width: 270px;
+                        @include size(270px);
                     }
                 }
             }
@@ -61,23 +54,21 @@
             }
 
             .address {
+                @include font(1.4rem, 1.5);
                 margin-left: 22px;
-                font-size: 1.4rem;
             }
         }     
     } 
 }
 
 .menu-header {
-    height: 93px;
+    @include size(100%, 93px);
     .menu-header-container {
-        height: 61px;
+        @include size(100%, 61px);
         .header-column {
-            height: 100%;
-
+            @include size();
             .header-previous {
-                position: relative;
-                bottom: 12px;
+                @include relative-position(inherit, inherit, 12px);
             }
         }
     }

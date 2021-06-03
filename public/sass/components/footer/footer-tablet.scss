@@ -1,5 +1,5 @@
 @include breakpoint(tactil) {
     .footer-menu {
-        top: 5.8rem;
+        @include relative-position(5.8rem);
     }
 }

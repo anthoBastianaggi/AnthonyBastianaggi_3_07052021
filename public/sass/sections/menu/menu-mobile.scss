@@ -1,5 +1,11 @@
 @include breakpoint(mobile) {
     #section-menu-la-palette-du-gout, #section-menu-la-note-enchantee, #section-menu-a-la-francaise, #section-menu-le-delice-des-sens {
+        .menu-picture {
+            .menu-image {
+                @include maxsize(100%, 400px);
+            }
+        }
+
         .section-menu-content {
             margin-top: -2.5rem;
 
@@ -9,7 +15,8 @@
                 .title {
                     padding-right: 15px;
                     @media screen and (max-width: 413px) {
-                        font-size: 1.9rem;
+                        @include font(1.9rem, 1.5, 600, -0.5px);
+                        font-family: Shrikhand, "cursive";
                     }
                 }
             }
@@ -20,7 +27,7 @@
                     .menu-starter-header, .menu-course-header, .menu-dessert-header {                   
                         .menu-starter-title, .menu-course-title, .menu-dessert-title {
                             @media screen and (max-width: 413px) {
-                                font-size: 1.1rem;
+                                @include font(1.1rem, 1.5, lighter);
                             }   
                         } 
                     }
@@ -29,20 +36,20 @@
                         .article-menu-starter-header, .article-menu-course-header, .article-menu-dessert-header {
                             .article-menu-starter-title, .article-menu-course-title, .article-menu-dessert-title {
                                 @media screen and (max-width: 413px) {
-                                    font-size: 1.2rem;
+                                    @include font(1.2rem, 1.5, 600);
                                 }
                             }
     
                             .article-menu-starter-subtitle, .article-menu-course-subtitle, .article-menu-dessert-subtitle {
                                 @media screen and (max-width: 413px) {
-                                    font-size: 1rem;
+                                    @include font(1rem, 1.5, lighter);
                                 }
                             }
                         }
     
                         .article-menu-starter-price, .article-menu-course-price, .article-menu-dessert-price {
                             @media screen and (max-width: 413px) {
-                                font-size: 1rem;
+                                @include font(1rem, 1.5, 600);
                             } 
                         }      
                     }
@@ -52,7 +59,7 @@
             .section-menu-footer {
                 .button-command {
                     @media screen and (max-width: 413px) {
-                        font-size: 1.1rem;
+                        @include font(1.1rem, 1.2);
                     }
                 }
             }

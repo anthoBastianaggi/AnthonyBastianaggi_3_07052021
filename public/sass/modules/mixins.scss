@@ -43,55 +43,7 @@
     max-width: $width;
 }
 
-@mixin transition($values...) { 
-    $transitions: ();
-
-    @each $declaration in $values { 
-        $prop: nth($declaration, 1); 
-        $prop-opts: ();
-        
-        @each $var in $declaration { 
-            $prop-opts: append($prop-opts, $var); 
-        } 
-        $trans: ($prop, $prop-opts); 
-        $transitions: append($transitions, $trans, comma); 
-    }
-
-    -webkit-transition: trans-prefix($transitions, webkit); 
-    -moz-transition: trans-prefix($transitions, moz); 
-    -o-transition: trans-prefix($transitions, o); 
-    transition: $values;
-}
-
-@mixin animation($name, $duration, $nbiteration, $fill: both) { 
-    -webkit-animation-duration: $duration; 
-    -moz-animation-duration: $duration; 
-    -o-animation-duration: $duration; 
-    animation-duration: $duration; 
-    -webkit-animation-name: $name; 
-    -moz-animation-name: $name; 
-    -o-animation-name: $name; 
-    animation-name: $name; 
-    -webkit-animation-iteration-count: $nbiteration; 
-    -moz-animation-iteration-count: $nbiteration; 
-    -o-animation-iteration-count: $nbiteration; 
-    animation-iteration-count: $nbiteration; 
-    -webkit-animation-fill-mode: $fill; 
-    -moz-animation-fill-mode: $fill; 
-    -o-animation-fill-mode: $fill; 
-    animation-fill-mode: $fill;
-}
-
 @mixin keyframes($name) {
-    @-webkit-keyframes #{$name} {
-        @content;
-    }
-    @-moz-keyframes #{$name} {
-        @content;
-    }
-    @-ms-keyframes #{$name} {
-        @content;
-    }
     @keyframes #{$name} {
         @content;
     }

@@ -1,23 +1,21 @@
 #functioning {
     .functioning-header {
-        max-width: 1080px;
+        @include maxsize(1080px);
         margin: 0 auto;
-        color: black;
+        color: var(--black);
         text-align: center;
         padding: 4rem 2rem 0 2rem;
 
         .title {
-            font-size: 3rem;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
+            @include font(3rem, 1.2, 600, -0.5px);
             margin-top: 0;
         }
     }
 
     .functioning-content {
-        max-width: 1080px;
+        @include maxsize(1080px);
         margin: 0 auto;
-        color: black;
+        color: var(--black);
         padding: 0 2rem 5.5rem 2rem;
 
         .functioning-list {
@@ -26,47 +24,42 @@
             padding: 0;
 
             .functioning-item {
+                @include flex();
+                @include align(inherit, center);
                 margin: 2.5rem 0 0 0;
-                align-items: center;
                 border-radius: 1.75rem;
                 padding: 2.25rem 1.5rem;
                 box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
-                background-color: #f6f6f6;
-                display: flex;
+                background-color: var(--white-smoke);
 
                 &:before {
+                    @include size(2.1rem, 2.1rem);
+                    @include flex();
+                    @include align(center, center);
+                    @include relative-position(inherit, inherit, inherit, -2.25rem);
                     counter-increment: compteListe 1;
                     content: counter(compteListe) " ";
-                    height: 2rem;
-                    width: 2rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: #fff;
-                    background-color: #9356dc;
-                    border: 1px solid #9356dc;
+                    color: var(--white);
+                    background-color: var(--primary);
                     border-radius: 100%;
-                    position: relative;
-                    left: -2.25rem;
                 }
 
                 &:hover {
-                    background-color: #e4d5f6;
-                    -webkit-box-shadow: 3px 3px 20px #c6bfbf;
-                    box-shadow: 3px 3px 20px #c6bfbf;
+                    background-color: var(--blue-chalk);
+                    box-shadow: 3px 3px 20px var(--silver);
 
                     .icon-mobile, .icon-list-ul, .icon-store {
-                        color: #9356dc;
+                        color: var(--primary);
                     }
                 }
 
                 .icon-mobile, .icon-list-ul, .icon-store {
                     font-size: 27px;
-                    color: #7e7e7e;
+                    color: var(--dim-gray);
                 }
 
                 .functioning-label {
-                    font-size: 1.4rem;
+                    @include font(1.4rem, 1.2, 400);
                     margin-left: 40px;
                 }
             }

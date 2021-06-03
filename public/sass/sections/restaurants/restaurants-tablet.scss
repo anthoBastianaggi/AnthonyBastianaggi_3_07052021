@@ -3,8 +3,8 @@
         .restaurants-content {
             .restaurants-column {
                 @media (min-width: 641px) and (max-width: 800px) {
+                    @include flex(column);
                     row-gap: 2rem;
-                    flex-direction: column;
                     padding-bottom: 2rem;
                 }
             }
