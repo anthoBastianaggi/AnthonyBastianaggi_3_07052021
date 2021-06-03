@@ -37,9 +37,8 @@
                     &:hover {
                         &::before {
                             transition: all .8s ease-in-out;
-                            background-clip: text;
                             -webkit-background-clip: text;
-                            background-image: linear-gradient(0deg, var(--primary), var(--secondary));
+                            background-image: linear-gradient(0deg, #9356DC,#FF79DA);
                             font-weight: 900;                                    
                             -webkit-text-fill-color: var(--transparent);
                         }     

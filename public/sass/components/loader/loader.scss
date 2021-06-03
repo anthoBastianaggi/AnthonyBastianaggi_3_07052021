@@ -107,7 +107,7 @@
 
 @include keyframes(stove-handle) {
   0% {
-    transform: translate(0,1);
+    transform: translate(0);
   }
   10% {
     transform: translate(0, -10%) rotate(25deg);
@@ -119,13 +119,13 @@
     transform: translate(0, -40%) rotate(10deg);
   }
   100% {
-    transform: translate(0,1);
+    transform: translate(0);
   }
 }
 
 @include keyframes(stove-base) {
   0% {
-    transform: translate(0, 1);
+    transform: translate(0);
   }
   10% {
     transform: translate(0, -10%) rotate(5deg);
@@ -140,13 +140,13 @@
     transform: rotate(5deg);
   }
   100% {
-    transform: translate(0,1) rotate(0deg);
+    transform: translate(0) rotate(0deg);
   }
 }
  
 @include keyframes(food) {
   0% {
-    transform: translate(0,1);
+    transform: translate(0);
   }
   10% {
     transform: translate(55px, -1px);
