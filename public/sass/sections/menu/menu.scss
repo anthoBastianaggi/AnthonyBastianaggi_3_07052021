@@ -2,48 +2,46 @@
     padding-bottom: 4rem;
     .menu-picture {
         .menu-image {
-            max-width: 100%;
-            max-height: 32rem;
-            width: 100%;
+            @include maxsize(100%, 32rem);
+            @include size(100%);
             object-fit: cover;
         }
     }
 
     .section-menu-content {
-        max-width: 1080px;
+        @include maxsize(1080px);
+        @include relative-position();
         margin: 0 auto;
         text-align: left;
-        color: black;
+        color: var(--black);
         margin-top: -6.5rem;
         border-radius: 2rem;
-        background-color: #f6f6f6;
+        background-color: var(--white-smoke);
         z-index: 1;
-        position: relative;
         .section-menu-header {
+            @include flex();
+            @include align(inherit, center, inherit);
             padding: 3.3rem 4rem 3rem 4rem;
-            display: flex;
-            align-items: center;
             .title {
-                font-size: 2.3rem;
-                letter-spacing: -0.5px;
+                @include font(2.3rem, 1.5, 600, -0.5px);
+                @include size(100%);
                 margin: 0;
-                line-height: 1.2;
                 display: block;
-                width: 100%;
                 font-family: Shrikhand, "cursive";
             }
 
             .btn-menu-content {
-                display: flex;
+                @include flex();
                 .icon-menu {
                     cursor: pointer;
                     &:hover {
                         &::before {
                             transition: all .8s ease-in-out;
+                            background-clip: text;
                             -webkit-background-clip: text;
-                            background-image: linear-gradient(0deg,#9356dc,#ff79da);
+                            background-image: linear-gradient(0deg, var(--primary), var(--secondary));
                             font-weight: 900;                                    
-                            -webkit-text-fill-color: transparent;
+                            -webkit-text-fill-color: var(--transparent);
                         }     
                     }
                 }
@@ -58,21 +56,17 @@
 
                 .menu-starter-header, .menu-course-header, .menu-dessert-header {
                     text-transform: uppercase;
-                    position: relative;
+                    @include relative-position();
                     &::after {
                         content: "";
-                        width: 3rem;
-                        height: .25rem;
-                        background-color: #99e2d0;
-                        position: absolute;
-                        left: 10px;
-                        bottom: 0;
+                        @include size(3rem, .25rem);
+                        @include absolute-position(inherit, inherit, 0, 10px);
+                        background-color: var(--tertiary);
                     }
 
                     .menu-starter-title, .menu-course-title, .menu-dessert-title {
+                        @include font(1.5rem, 1.5, lighter);
                         padding-bottom: .5rem;
-                        font-weight: lighter;
-                        font-size: 1.5rem;
                         margin: 0;
                         margin-bottom: 1.5rem;
                         padding-left: 10px;
@@ -80,15 +74,15 @@
                 }
 
                 .article-menu-starter, .article-menu-course, .article-menu-dessert {
-                    background-color: #fff;
+                    @include flex();
+                    @include maxsize(100%);
+                    background-color: var(--white);
                     padding: 1rem;
-                    display: flex;
                     border-radius: .75rem;
                     margin: 1.2rem 0;
                     box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
                     overflow: hidden;
                     cursor: pointer;
-                    max-width: 100%;
                     animation: article-menu-opacity 200ms 3500ms linear both;
 
                     &:hover {
@@ -101,23 +95,21 @@
                     }
 
                     .article-menu-starter-header, .article-menu-course-header, .article-menu-dessert-header {
-                        display: flex;
-                        flex-direction: column;
+                        @include flex(column);
                         flex: 1;
                         white-space: nowrap;
                         text-overflow: ellipsis;
                         overflow: hidden;
                         .article-menu-starter-title, .article-menu-course-title, .article-menu-dessert-title {
+                            @include font(1.6rem, 1.5, 600);
                             margin: 0;
-                            font-size: 1.6rem;
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             overflow: hidden;
                         }
 
                         .article-menu-starter-subtitle, .article-menu-course-subtitle, .article-menu-dessert-subtitle {
-                            font-size: 1.4rem;
-                            font-weight: lighter;
+                            @include font(1.4rem, 1.5, lighter);
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             overflow: hidden;
@@ -125,33 +117,28 @@
                     }
 
                     .article-menu-starter-price, .article-menu-course-price, .article-menu-dessert-price {
-                        font-weight: 700;
-                        display: flex;
-                        justify-content: flex-end;
-                        align-items: flex-end;
+                        @include font(1.4rem, 1.5, 700);
+                        @include flex();
+                        @include align(flex-end, flex-end);
                         padding: 0 1rem;
-                        font-size: 1.4rem;
                     }      
                     
                     .article-menu-starter-confirmation, .article-menu-course-confirmation, .article-menu-dessert-confirmation {
-                        background-color: #99e2d0;
+                        @include size(5.5rem, auto);
+                        @include flex();
+                        @include align(center, center);
+                        background-color: var(--tertiary);
                         margin: -1rem -6.5rem -1rem 1rem;
-                        width: 5.5rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         transition-duration: .5s;
-                        color: #99e2d0;
                         .article-menu-starter-confirmation-icon, .article-menu-course-confirmation-icon, .article-menu-dessert-confirmation-icon {
-                            height: 1.6rem;
-                            width: 1.6rem;
-                            background-color: #fff;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
+                            @include size(1.6rem, 1.6rem);
+                            @include flex();
+                            @include align(center, center);
+                            background-color: var(--white);
                             border-radius: 100px;
                             transform: rotate(180deg);
                             transition-duration: .5s;
+                            color: var(--tertiary);
                         }
                     }
                 }
@@ -167,26 +154,25 @@
         }
 
         .section-menu-footer {
-            display: flex;
+            @include flex();
+            @include align(center);
             text-decoration: none;
-            justify-content: center;
             padding: 3rem 0 5.3rem 0;
 
             .button-command {
+                @include font(1.5rem, 1.5, 500);
                 border: 0;
                 padding: 1.5rem 4.5rem;
-                font-weight: 500;
-                font-size: 1.5rem;
                 border-radius: 100px;
-                color: #fff;
-                background-color: #686868;
+                color: var(--white);
+                background-color: var(--dim-gray);
                 background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
                 transition-duration: 0.25s;
                 box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
                 cursor: pointer;
 
                 &:hover {
-                    background-color: #fff;
+                    background-color: var(--white);
                     box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
                 }
             }

@@ -1,26 +1,25 @@
 @include breakpoint(mobile) {
     .header {
-        height: 93px;
+        @include size(100%, 93px);
     
         .header-container {
-            height: 61px;
+            @include size(auto, 61px);
     
             .header-column {
+                @include size();
+                @include align(inherit, baseline !important);
                 margin-bottom: 0;
-                height: 100%;
-                align-items: baseline !important;
 
                 .header-previous {
-                    position: relative;
-                    bottom: 12px;
+                    @include relative-position(inherit, inherit, 12px);
                 }
     
                 .header-title {
                     .header-link {
                         .logo-ohmyfood {
-                            width: 250px;
+                            @include size(250px);
                             @media screen and (max-width: 413px) {
-                                width: 230px;
+                                @include size(230px);
                             }
                         }
                     }
