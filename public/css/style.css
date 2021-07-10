@@ -1123,8 +1123,8 @@
   align-content: inherit;
   background-color: var(--white);
   border-radius: 100px;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
+  transform: rotate(360deg);
+  transition-duration: 1s;
   color: var(--tertiary);
 }
 #section-menu-la-palette-du-gout .section-menu-content .menu-content .menu-course, #section-menu-la-note-enchantee .section-menu-content .menu-content .menu-course, #section-menu-a-la-francaise .section-menu-content .menu-content .menu-course, #section-menu-le-delice-des-sens .section-menu-content .menu-content .menu-course {
